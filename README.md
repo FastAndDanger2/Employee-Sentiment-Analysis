@@ -40,6 +40,29 @@ employee-sentiment-analysis/
 ├── report.docx # Formal report with findings
 └── requirements.txt # Python package dependencies
 
+## Setup Instructions
+To run this project locally:
+
+**Clone the repository**
+git clone https://github.com/yourusername/employee-sentiment-analysis.git
+cd employee-sentiment-analysis
+
+# Create and activate a virtual environment
+python3 -m venv venv
+source venv/bin/activate  # macOS/Linux
+# OR
+venv\Scripts\activate     # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set up environment variables
+cp .env.example .env
+
+# Launch Jupyter and run the notebook
+jupyter notebook notebooks/analysis.ipynb
+
+
 Results Summary
 Top 3 Positive Employees (Sample Output):
 
