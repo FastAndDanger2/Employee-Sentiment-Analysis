@@ -39,3 +39,52 @@ employee-sentiment-analysis/
 ├── README.md # This file
 ├── report.docx # Formal report with findings
 └── requirements.txt # Python package dependencies
+
+Results Summary
+Top 3 Positive Employees (Sample Output):
+
+alice@corp.com
+raj@corp.com
+john@corp.com
+
+Top 3 Negative Employees (Sample Output):
+
+mike@corp.com
+zoe@corp.com
+carla@corp.com
+
+Employees Flagged as Flight Risks:
+
+mike@corp.com
+deepa@corp.com
+carla@corp.com
+
+Model Performance (Linear Regression):
+
+R² Score: 0.72
+Mean Squared Error: 3.35
+
+The model indicates that message frequency and average length are meaningful predictors of overall sentiment scores.
+
+Methodology
+Sentiment Analysis: VADER sentiment scoring with thresholds for Positive (≥ 0.05), Negative (≤ -0.05), and Neutral (otherwise)
+
+EDA: Histograms, boxplots, and count distributions to uncover patterns
+
+Scoring: Sentiment converted to numeric scores (+1, 0, -1), aggregated monthly
+
+Ranking: Employees sorted by sentiment score per month
+
+Flight Risk: Employees with ≥ 4 negative messages in any 30-day rolling window
+
+Modeling: Linear regression using message count and average length as features
+
+Notes
+This project uses only publicly available libraries (NLTK, pandas, matplotlib, seaborn, sklearn).
+
+No external APIs or sensitive data are used.
+
+All results and visuals are reproducible from the provided notebook.
+
+License
+This project was completed as part of an internal evaluation. It is not intended for public distribution. Please do not share or reuse without permission.
